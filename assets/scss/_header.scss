@@ -1,0 +1,38 @@
+header {
+    position: fixed;
+    display: flex;
+    gap: 5rem;
+    padding: 1.5rem 2rem;
+    width: 100%;
+    border-bottom: 3px solid #fff;
+    backdrop-filter: blur(3px);
+
+    animation: fade_in_bottom_to_top $animation_duration ease-in-out 2s both;
+    
+    .logo {
+        img {
+            width: 120px;
+        }
+    }
+    
+    .menu {
+        gap: 2.5rem;
+        display: flex;
+
+        &__item {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: #f1c40f;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+}
