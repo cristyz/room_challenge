@@ -11,11 +11,24 @@
         object-fit: cover;
     }
 
-    .chair_1 {
+    .slider {
         grid-column: 1 / 5;
         grid-row: 1 / 2;
         animation: clip_path_top_to_bottom $animation_duration ease-in-out;
+        position: relative;
+
+        .chair {
+            position: absolute;
+            opacity: 0;
+            transition: 1s ease-in-out;
+        }
+
+        .active_slide__item {
+            opacity: 1;
+        }
+
     }
+
 
     .chair_2 {
         grid-column: 1 / 3;
